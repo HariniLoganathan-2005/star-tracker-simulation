@@ -1,0 +1,152 @@
+/*  Mission Control — Dark Aerospace Theme  */
+
+QMainWindow {
+    background-color: #0a0e17;
+}
+
+QWidget {
+    color: #c8d6e5;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 12px;
+}
+
+/* ── Group Boxes ── */
+QGroupBox {
+    background-color: #111827;
+    border: 1px solid #1e3a5f;
+    border-radius: 6px;
+    margin-top: 12px;
+    padding-top: 18px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #00d4ff;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 2px 10px;
+    background-color: #1e3a5f;
+    border-radius: 3px;
+    color: #00d4ff;
+}
+
+/* ── Labels ── */
+QLabel {
+    color: #c8d6e5;
+    font-size: 12px;
+}
+QLabel#title_label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00d4ff;
+    padding: 8px;
+}
+QLabel#status_label {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 4px;
+    min-height: 28px;
+}
+
+/* ── Sliders ── */
+QSlider::groove:horizontal {
+    border: 1px solid #1e3a5f;
+    height: 6px;
+    background: #1a2332;
+    border-radius: 3px;
+}
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #00d4ff, stop:1 #0088aa);
+    border: 1px solid #005577;
+    width: 16px;
+    margin: -6px 0;
+    border-radius: 8px;
+}
+QSlider::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #33e0ff, stop:1 #00aacc);
+}
+QSlider::sub-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #0066aa, stop:1 #00d4ff);
+    border-radius: 3px;
+}
+
+/* ── Push Buttons ── */
+QPushButton {
+    background-color: #1e3a5f;
+    color: #00d4ff;
+    border: 1px solid #2a5f8f;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 32px;
+}
+QPushButton:hover {
+    background-color: #2a5f8f;
+    border-color: #00d4ff;
+}
+QPushButton:pressed {
+    background-color: #00d4ff;
+    color: #0a0e17;
+}
+QPushButton#recover_btn {
+    background-color: #8b0000;
+    color: #ff6666;
+    border-color: #ff3333;
+    font-size: 15px;
+    min-height: 44px;
+}
+QPushButton#recover_btn:hover {
+    background-color: #cc0000;
+    color: #ffffff;
+}
+QPushButton#recover_btn:disabled {
+    background-color: #333;
+    color: #666;
+    border-color: #444;
+}
+
+/* ── Spin boxes ── */
+QDoubleSpinBox {
+    background-color: #1a2332;
+    border: 1px solid #1e3a5f;
+    border-radius: 4px;
+    padding: 2px 4px;
+    color: #00d4ff;
+}
+
+/* ── Telemetry values ── */
+QLabel[telemetry="true"] {
+    font-family: "Consolas", monospace;
+    font-size: 14px;
+    color: #00ff88;
+    background-color: #0d1117;
+    border: 1px solid #1e3a5f;
+    border-radius: 3px;
+    padding: 4px 8px;
+}
+
+/* ── Progress bars ── */
+QProgressBar {
+    border: 1px solid #1e3a5f;
+    border-radius: 4px;
+    background-color: #111827;
+    text-align: center;
+    color: #00d4ff;
+    height: 16px;
+}
+QProgressBar::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #0066aa, stop:1 #00d4ff);
+    border-radius: 3px;
+}
+
+/* ── Scroll areas ── */
+QScrollArea {
+    border: none;
+    background: transparent;
+}
